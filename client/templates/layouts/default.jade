@@ -1,43 +1,15 @@
 doctype html
 html
 
-	//- HTML HEADER
 	head
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 
 		title= title || 'node-web-app'
-		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
-
-		//- Customise the stylesheet for your site by editing /public/styles/site.sass
+		
 		link(href="/css/app.css", rel="stylesheet")
 
-		//- This file provides the default styling for the KeystoneJS Content Editor
-		if user && user.canAccessKeystone
-			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
-
-		//- Include template-specific stylesheets by extending the css block
-		block css
-
-		//- Add any other template-specific HEAD tags by extending the head block
-		block head
-
-	//- HTML BODY
 	body
 
-		//- The content block should contain the body of your template's content
 		block content
-
-
-		//- JAVASCRIPT
-		script(src='/js/jquery/jquery-2.1.4.min.js')
-		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
-
-		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
-		//- which generate links to edit content for users who can access Keystone
-		if user && user.canAccessKeystone
-			script(src='/keystone/js/content/editor.js')
-
-		//- Include template-specific javascript files by extending the js block
-		block js
