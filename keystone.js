@@ -17,9 +17,10 @@ keystone.init({
 	'stylus': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
-	'views': 'templates/views',
+	'views': 'client/templates/views',
 	'view engine': 'jade',
 	
+	'updates': 'server/updates',
 	'auto update': true,
 	'session': true,
 	'auth': true,
@@ -29,7 +30,7 @@ keystone.init({
 
 // Load your project's Models
 
-keystone.import('models');
+keystone.import('server/models');
 
 // Setup common locals for your templates. The following are required for the
 // bundled templates and layouts. Any runtime locals (that should be set uniquely
@@ -44,7 +45,7 @@ keystone.set('locals', {
 
 // Load your project's Routes
 
-keystone.set('routes', require('./routes'));
+keystone.set('routes', require('./server/routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 

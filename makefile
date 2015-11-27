@@ -1,5 +1,5 @@
 setup:
 	npm install
 
-styles:
-	stylus -w public/styles/site.styl
+styles_watch:
+	stylus -w client/styles/app.styl -o public/css/
