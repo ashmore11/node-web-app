@@ -6,6 +6,7 @@ var rupture     = require('rupture');
 var jeet        = require('jeet');
 var handleError = require('../util/handleError');
 var CSSmin      = require('gulp-minify-css');
+var livereload  = require('gulp-livereload');
 var config      = require('../config');
 
 gulp.task('styles', function() {
@@ -21,6 +22,7 @@ gulp.task('styles', function() {
     .on('error', handleError)
 
     .pipe(gulpif(config.env.production, CSSmin()))
-    .pipe(gulp.dest(config.paths.styles.destination));
+    .pipe(gulp.dest(config.paths.styles.destination))
+    .pipe(gulpif(config.env.development, livereload()));
 
 });
