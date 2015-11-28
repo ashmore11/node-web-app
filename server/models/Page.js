@@ -3,9 +3,7 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 var Pages = new keystone.List('page', {
-  map: { 
-  	name: 'title' 
-  },
+  map: { name: 'title' },
   autokey: { 
   	path: 'slug', 
   	from: 'title', 
@@ -14,45 +12,29 @@ var Pages = new keystone.List('page', {
 });
 
 Pages.add({
-  title: { 
-  	type: String, 
-  	required: true 
-  },
-  state: { 
-  	type: Types.Select, 
-  	options: 'draft, published, archived', 
-  	default: 'published', index: true 
-  },
-  publishedDate: { 
-  	type: Types.Date, 
-  	index: true, 
-  	dependsOn: { 
-  		state: 'published' 
-  	} 
-  },
-  image: { 
-  	type: Types.LocalFile, 
-  	dest: 'public/images'
-  },
-  content: {
-    brief: { 
-    	type: Types.Html, 
-    	wysiwyg: true, 
-    	height: 150 
-    },
-    extended: { 
-    	type: Types.Html, 
-    	wysiwyg: true, 
-    	height: 400 
+  meta:{
+    title:       { type: Types.Text },
+    description: { type: Types.Text },
+    keywords:    { type: Types.Text },
+    og: {
+      title:       { type: Types.Text },
+      site_name:   { type: Types.Text },
+      description: { type: Types.Text },
+      image:       { type: Types.Text },
+      url:         { type: Types.Text },
+      type:        { type: Types.Text }
     }
   },
+  title: { 
+  	type: String,
+  	required: true
+  },
+  description: {
+    type: Types.Textarea,
+    initial: false,
+    required: false
+  },
 });
 
-Pages.schema.virtual('content.full').get(function() {
-
-  return this.content.extended || this.content.brief;
-
-});
-
-Pages.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
+Pages.defaultColumns = 'title';
 Pages.register();

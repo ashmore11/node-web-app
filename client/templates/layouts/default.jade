@@ -1,15 +1,33 @@
 doctype html
 html
 
-	head
-		meta(charset="utf-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  head
+    //- Tech Meta
+    meta(http-equiv="Content-Type",    content="text/html; charset=utf-8" )
+    meta(http-equiv="X-UA-Compatible", content="IE=7")
+    meta(name="viewport",              content="width=device-width, initial-scale=1.0")
 
-		title= title || 'node-web-app'
-		
-		link(href="/css/app.css", rel="stylesheet")
+    //- Basic Meta
+    title= page.meta.title
+    
+    meta(name="description", content="#{page.meta.description}")
+    meta(name="keywords",    content="#{page.meta.keywords}")
+      
+    //- Facebook Meta
+    meta(property="og:title",       content="#{page.meta.og.title}" )
+    meta(property="og:site_name",   content="#{page.meta.og.site_name}" )
+    meta(property="og:description", content="#{page.meta.og.description}" )
+    meta(property="og:image",       content="#{page.meta.og.image}" )
+    meta(property="og:url",         content="#{page.meta.og.url}" )
+    meta(property="og:type",        content="#{page.meta.og.type}" )
+    
+    link(href="/css/app.css", rel="stylesheet")
 
-	body
+  body
 
-		block content
+    header(id="main-header")
+      ul
+        li: a(href="/") Home
+        li: a(href="/example") Example
+
+    block content
