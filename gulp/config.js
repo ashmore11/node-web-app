@@ -16,6 +16,9 @@ module.exports = {
       source: './client/styles/app.styl',
       watch: 'client/styles/**/*.styl',
       destination: './public/css/'
+    },
+    templates: {
+      watch: './client/templates/**/*.jade'
     }
   }
 

@@ -39,7 +39,8 @@ keystone.set('locals', {
 	_: require('underscore'),
 	env: keystone.get('env'),
 	utils: keystone.utils,
-	editable: keystone.content.editable
+	editable: keystone.content.editable,
+	basepath: process.env.PWD
 });
 
 // Load your project's Routes

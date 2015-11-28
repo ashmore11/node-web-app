@@ -8,6 +8,9 @@ gulp.task('watch', function() {
 
 	gulp.watch(config.paths.styles.watch, ['styles']);
 
+  // TODO - watch for changes to jade files
+  // gulp.watch(config.paths.templates.watch, [livereload()]);
+
 	gulp.emit('update');
 
 });
