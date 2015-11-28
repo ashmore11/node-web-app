@@ -8,7 +8,7 @@ html
     meta(name="viewport",              content="width=device-width, initial-scale=1.0")
 
     //- Basic Meta
-    title= page.meta.title
+    title #{page.meta.title}
     
     meta(name="description", content="#{page.meta.description}")
     meta(name="keywords",    content="#{page.meta.keywords}")
@@ -25,9 +25,12 @@ html
 
   body
 
-    header(id="main-header")
+    header(id="header")
       ul
         li: a(href="/") Home
         li: a(href="/example") Example
 
     block content
+
+    footer(id="footer")
+      span Footer...
