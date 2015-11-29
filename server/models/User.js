@@ -29,7 +29,7 @@ User.add({
     label: 'Can access Keystone',
     index: true
   }
-});
+}); 
 
 // Provide access to Keystone
 User.schema.virtual('canAccessKeystone').get(function() {

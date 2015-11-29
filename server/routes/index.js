@@ -35,7 +35,7 @@ var routes = {
 exports = module.exports = function(app) {
 	
 	// Views
-	app.get('/', routes.views.index);
+	app.get('/', routes.views.home);
 	app.get('/example', routes.views.example);
 	
 	

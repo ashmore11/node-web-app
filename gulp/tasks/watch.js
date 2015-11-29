@@ -1,5 +1,7 @@
 var gulp       = require('gulp');
 var livereload = require('gulp-livereload');
+var watch      = require('gulp-watch');
+var chalk      = require('chalk');
 var config     = require('../config');
 
 gulp.task('watch', function() {
@@ -8,8 +10,13 @@ gulp.task('watch', function() {
 
 	gulp.watch(config.paths.styles.watch, ['styles']);
 
-  // TODO - watch for changes to jade files
-  // gulp.watch(config.paths.templates.watch, [livereload()]);
+  watch(config.paths.templates.watch, function() {
+
+    console.log(chalk.green('template updated, reloading...'));
+
+    livereload.reload();
+
+  });
 
 	gulp.emit('update');
 

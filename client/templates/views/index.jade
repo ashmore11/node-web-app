@@ -6,3 +6,7 @@ block content
 
     h1 #{page.title}
     p #{page.description}
+
+    each image in images
+      
+      img(id="#{image.slug}" src="images/uploads/#{image.image.filename}")
