@@ -10,6 +10,6 @@ exports = module.exports = function(req, res) {
 	view.query('page', keystone.list('page').model.findOne({slug: 'home'}));
   view.query('images', keystone.list('images').model.find());
 	
-	view.render('index');
+	view.render('home');
 	
 };

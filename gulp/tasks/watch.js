@@ -12,7 +12,9 @@ gulp.task('watch', function() {
 
   watch(config.paths.templates.watch, function() {
 
+    console.log(chalk.green('------------------------------'));
     console.log(chalk.green('template updated, reloading...'));
+    console.log(chalk.green('------------------------------'));
 
     livereload.reload();
 

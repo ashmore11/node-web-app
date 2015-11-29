@@ -14,7 +14,7 @@
 
 /* line 14 : /Users/scott/Desktop/work/node-web-app/node_modules/rupture/rupture/index.styl */
 
-/* line 7 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/index.styl */
+/* line 28 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/index.styl */
 
 /* line 10 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/index.styl */
 
@@ -34,7 +34,7 @@
 
 /* line 90 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/flex.styl */
 
-/* line 7 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/gradients.styl */
+/* line 28 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/gradients.styl */
 
 /* line 11 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/gradients.styl */
 
@@ -50,7 +50,7 @@
 
 /* line 19 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/image.styl */
 
-/* line 7 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/normalize/index.styl */
+/* line 28 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/normalize/index.styl */
 
 /* line 8 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/normalize/index.styl */
 
@@ -98,7 +98,7 @@
 
 /* line 5 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/reset.styl */
 
-/* line 7 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/text/index.styl */
+/* line 28 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/text/index.styl */
 
 /* line 12 : /Users/scott/Desktop/work/node-web-app/node_modules/nib/lib/nib/text/index.styl */
 
@@ -150,7 +150,7 @@
 
 /* line 25 : /Users/scott/Desktop/work/node-web-app/node_modules/jeet/stylus/jeet/_grid.styl */
 
-/* line 7 : /Users/scott/Desktop/work/node-web-app/client/styles/reset.styl */
+/* line 28 : /Users/scott/Desktop/work/node-web-app/client/styles/reset.styl */
 
 /* line 12 : /Users/scott/Desktop/work/node-web-app/client/styles/reset.styl */
 
@@ -399,17 +399,12 @@ h2 {
 
 /* line 24 : /Users/scott/Desktop/work/node-web-app/client/styles/app.styl */
 /**
- * Components
- */
-
-/* line 28 : /Users/scott/Desktop/work/node-web-app/client/styles/app.styl */
-/**
  * Views
  */
 
-/* line 7 : /Users/scott/Desktop/work/node-web-app/client/styles/common/page.styl */
+/* line 3 : /Users/scott/Desktop/work/node-web-app/client/styles/common/page.styl */
 
-/* line 7 : /Users/scott/Desktop/work/node-web-app/client/styles/views/home.styl */
+/* line 5 : /Users/scott/Desktop/work/node-web-app/client/styles/views/home.styl */
 
 /* line 1 : /Users/scott/Desktop/work/node-web-app/client/styles/views/home.styl */
 
@@ -420,7 +415,7 @@ h2 {
 
 /* line 7 : /Users/scott/Desktop/work/node-web-app/client/styles/views/home.styl */
 
-/* line 2 : /Users/scott/Desktop/work/node-web-app/client/styles/views/example.styl */
+/* line 3 : /Users/scott/Desktop/work/node-web-app/client/styles/views/example.styl */
 
 /* line 1 : /Users/scott/Desktop/work/node-web-app/client/styles/views/example.styl */
 
