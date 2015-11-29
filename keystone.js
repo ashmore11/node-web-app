@@ -15,20 +15,19 @@ var keystone = require('keystone');
  * and documentation.
  */
 keystone.init({
-	'name': 'node-web-app',
-	'brand': 'node-web-app',
 	
-	'stylus': 'public',
-	'static': 'public',
-	'favicon': 'public/favicon.ico',
-	'views': 'client/templates/views',
-	'view engine': 'jade',
-	
-	'updates': 'server/updates',
-	'auto update': true,
-	'session': true,
-	'auth': true,
-	'user model': 'User'
+	'name'        : 'node-web-app',
+	'brand'       : 'Node Web App',
+	'static'      : 'public',
+	'favicon'     : 'public/favicon.ico',
+	'views'       : 'client/templates/views',
+	'view engine' : 'jade',
+	'updates'     : 'server/updates',
+	'auto update' : true,
+	'session'     : true,
+	'auth'        : true,
+	'user model'  : 'User'
+
 });
 
 /**
@@ -42,10 +41,8 @@ keystone.import('./server/models');
  * for each request) should be added to ./routes/middleware.js
  */
 keystone.set('locals', {
-	_: require('underscore'),
 	env: keystone.get('env'),
-	utils: keystone.utils,
-	editable: keystone.content.editable
+	utils: keystone.utils
 });
 
 /**
@@ -57,9 +54,9 @@ keystone.set('routes', require('./server/routes'));
  * Configure the navigation bar in Keystone's Admin UI
  */
 keystone.set('nav', {
-	'pages': 'pages',
+	'pages'  : 'pages',
 	'gallery': 'images',
-	'users': 'users'
+	'users'  : 'users'
 });
 
 /**
