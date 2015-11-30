@@ -1,13 +1,13 @@
-var gulp        = require('gulp');
-var gulpif      = require('gulp-if');
-var stylus      = require('gulp-stylus');
-var nib         = require('nib');
-var rupture     = require('rupture');
-var jeet        = require('jeet');
-var handleError = require('../util/handleError');
-var CSSmin      = require('gulp-minify-css');
-var livereload  = require('gulp-livereload');
-var config      = require('../config');
+import gulp        from 'gulp';
+import gulpif      from 'gulp-if';
+import stylus      from 'gulp-stylus';
+import nib         from 'nib';
+import rupture     from 'rupture';
+import jeet        from 'jeet';
+import handleError from '../util/handleError';
+import CSSmin      from 'gulp-minify-css';
+import livereload  from 'gulp-livereload';
+import config      from '../config';
 
 gulp.task('styles', function() {
   

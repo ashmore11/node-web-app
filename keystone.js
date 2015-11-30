@@ -16,7 +16,7 @@ var keystone = require('keystone');
  */
 keystone.init({
 	'name': 'node-web-app',
-	'brand': 'node-web-app',
+	'brand': 'Node Web App',
 	
 	'stylus': 'public',
 	'static': 'public',

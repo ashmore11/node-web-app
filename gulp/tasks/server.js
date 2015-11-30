@@ -1,6 +1,6 @@
-var gulp    = require('gulp');
-var nodemon = require('gulp-nodemon');
-var config  = require('../config.js')
+import gulp    from 'gulp';
+import nodemon from 'gulp-nodemon';
+import config  from '../config';
 
 gulp.task('server', function() {
 

@@ -1,8 +1,8 @@
-var gulp       = require('gulp');
-var livereload = require('gulp-livereload');
-var watch      = require('gulp-watch');
-var chalk      = require('chalk');
-var config     = require('../config');
+import gulp       from 'gulp';
+import livereload from 'gulp-livereload';
+import watch      from 'gulp-watch';
+import chalk      from 'chalk';
+import config     from '../config';
 
 gulp.task('watch', function() {
 
