@@ -1,11 +1,9 @@
 var gulp    = require('gulp');
 var nodemon = require('gulp-nodemon');
+var config  = require('../config.js')
 
 gulp.task('server', function() {
 
-  nodemon({
-    script: 'keystone.js',
-    ignore: ['gulp', 'client', 'node_modules', 'public']
-  });
+  nodemon(config.nodemon);
 
 });
