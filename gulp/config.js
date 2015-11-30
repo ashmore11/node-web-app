@@ -12,6 +12,12 @@ module.exports = {
    * Paths for all the source files
    */
   paths: {
+  	scripts: {
+      source: './client/scripts/app.js',
+      watch: './client/scripts/**/*.js',
+      destination: './public/js/',
+      filename: 'app.js',
+    },
     styles: {
       source: './client/styles/app.styl',
       watch: 'client/styles/**/*.styl',
@@ -20,6 +26,28 @@ module.exports = {
     templates: {
       watch: './client/templates/**/*.jade'
     }
-  }
+  },
+
+  /**
+   * Config for the webpack module bundler
+   */
+  webpack: {
+    output: {
+      path: process.env.PWD + '/public',
+      filename: 'app.js',
+    },
+    module: {
+      loaders: [
+        { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+      ]
+    },
+    resolve: {
+      extensions: ['', '.js'],
+      alias: {
+      	app: process.env.PWD + '/client/scripts',
+        views: process.env.PWD + '/client/scripts/views',
+      }
+    },
+  },
 
 };

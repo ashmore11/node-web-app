@@ -5,7 +5,7 @@ gulp.task('server', function() {
 
   nodemon({
     script: 'keystone.js',
-    ignore: ['gulp', 'public', 'node_modules']
+    ignore: ['gulp', 'client', 'node_modules', 'public']
   });
 
 });
