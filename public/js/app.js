@@ -46,28 +46,27 @@
 
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	var _home = __webpack_require__(1);
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	var _home2 = _interopRequireDefault(_home);
 
-	var _viewsHome = __webpack_require__(1);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var _viewsHome2 = _interopRequireDefault(_viewsHome);
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var App = function App() {
 		_classCallCheck(this, App);
 
 		console.log('---[ APP ]---');
 
-		var homeView = new _viewsHome2['default']();
+		var homeView = new _home2.default();
 	};
 
-	exports['default'] = new App();
-	module.exports = exports['default'];
+	exports.default = new App();
 
 /***/ },
 /* 1 */
@@ -75,11 +74,11 @@
 
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Home = function Home() {
 		_classCallCheck(this, Home);
@@ -87,8 +86,7 @@
 		console.log('---[ VIEW HOME ]---');
 	};
 
-	exports['default'] = Home;
-	module.exports = exports['default'];
+	exports.default = Home;
 
 /***/ }
 /******/ ]);
