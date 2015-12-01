@@ -62,7 +62,7 @@ class Navigation {
 
 		const params = {
 			autoAlpha: 0,
-			ease: Power1.easeInOut,
+			ease: Power1.easeOut,
 			onComplete: () => { this.loadPage(); }
 		};
 
@@ -83,19 +83,11 @@ class Navigation {
 
 	loadPage() {
 
-		this.$main.load(`${this.url} .page`, (err, success) => {
-			
-			if(success) {
-			
-				this.fadeIn();
+		this.$main.load(`${this.url} .page`, null, () => {
 
-				this.emit('url:changed', this.id);
+			this.emit('url:changed', this.id);
 			
-			} else {
-			
-				console.log(err);
-
-			}
+			this.fadeIn();
 
 		});
 

@@ -193,7 +193,7 @@
 
 				var params = {
 					autoAlpha: 0,
-					ease: Power1.easeInOut,
+					ease: Power1.easeOut,
 					onComplete: function onComplete() {
 						_this.loadPage();
 					}
@@ -217,17 +217,11 @@
 			value: function loadPage() {
 				var _this2 = this;
 
-				this.$main.load(this.url + ' .page', function (err, success) {
+				this.$main.load(this.url + ' .page', null, function () {
 
-					if (success) {
+					_this2.emit('url:changed', _this2.id);
 
-						_this2.fadeIn();
-
-						_this2.emit('url:changed', _this2.id);
-					} else {
-
-						console.log(err);
-					}
+					_this2.fadeIn();
 				});
 			}
 		}, {
