@@ -74,30 +74,26 @@
 
 			_classCallCheck(this, App);
 
-			_navigation2.default.on('url:changed', function (id) {
+			var nav = new _navigation2.default();
+
+			nav.on('url:changed', function (id) {
 
 				_this.renderView(id);
 			});
+
+			nav.init();
 		}
 
 		_createClass(App, [{
 			key: 'renderView',
 			value: function renderView(id) {
 
-				switch (id) {
+				if (id === 'home') {
 
-					case 'home':
+					this.view = new _home2.default();
+				} else if (id === 'example') {
 
-						this.view = new _home2.default();
-
-						break;
-
-					case 'example':
-
-						this.view = new _example2.default();
-
-						break;
-
+					this.view = new _example2.default();
 				}
 			}
 		}]);
@@ -140,15 +136,23 @@
 			_classCallCheck(this, Navigation);
 
 			(0, _happens2.default)(this);
-
-			this.popEventListnerAdded = false;
-
-			this.$main = (0, _jquery2.default)('#main');
-
-			this.bindEvents();
 		}
 
 		_createClass(Navigation, [{
+			key: 'init',
+			value: function init() {
+
+				this.popEventListnerAdded = false;
+
+				this.$main = (0, _jquery2.default)('#main');
+
+				this.id = this.$main[0].children[0].id;
+
+				this.emit('url:changed', this.id);
+
+				this.bindEvents();
+			}
+		}, {
 			key: 'bindEvents',
 			value: function bindEvents() {
 
@@ -178,7 +182,6 @@
 				}
 
 				this.fadeOut();
-
 				this.pushState();
 
 				if (!this.popEventListnerAdded) {
@@ -199,7 +202,7 @@
 					}
 				};
 
-				_gsap2.default.to(this.$main, 0.5, params);
+				_gsap2.default.to(this.$main, 0.25, params);
 			}
 		}, {
 			key: 'fadeIn',
@@ -210,7 +213,7 @@
 					ease: Power1.easeInOut
 				};
 
-				_gsap2.default.to(this.$main, 0.5, params);
+				_gsap2.default.to(this.$main, 0.25, params);
 			}
 		}, {
 			key: 'loadPage',
@@ -237,11 +240,13 @@
 
 				(0, _jquery2.default)(window).on('popstate', function (event) {
 
-					_this3.url = event.originalEvent.state;
+					var state = event.originalEvent.state;
 
-					_this3.fadeOut();
+					_this3.url = state;
 
 					_this3.popEventListnerAdded = true;
+
+					_this3.fadeOut();
 				});
 			}
 		}]);
@@ -249,7 +254,7 @@
 		return Navigation;
 	})();
 
-	exports.default = new Navigation();
+	exports.default = Navigation;
 
 /***/ },
 /* 2 */

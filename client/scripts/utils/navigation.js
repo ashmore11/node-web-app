@@ -8,9 +8,17 @@ class Navigation {
 
 		Happens(this);
 
+	}
+
+	init() {
+
 		this.popEventListnerAdded = false;
 
 		this.$main = $('#main');
+
+		this.id = this.$main[0].children[0].id;
+
+		this.emit('url:changed', this.id);
 
 		this.bindEvents();
 
@@ -47,7 +55,6 @@ class Navigation {
 		}
 
 		this.fadeOut();
-
 		this.pushState();
 
 		if(!this.popEventListnerAdded) {
@@ -66,7 +73,7 @@ class Navigation {
 			onComplete: () => { this.loadPage(); }
 		};
 
-		TweenMax.to(this.$main, 0.5, params);
+		TweenMax.to(this.$main, 0.25, params);
 
 	}
 
@@ -77,7 +84,7 @@ class Navigation {
 			ease: Power1.easeInOut
 		};
 
-		TweenMax.to(this.$main, 0.5, params);
+		TweenMax.to(this.$main, 0.25, params);
 
 	}
 
@@ -103,11 +110,13 @@ class Navigation {
 
 		$(window).on('popstate', event => {
 
-			this.url = event.originalEvent.state;
+			const state = event.originalEvent.state;
 
-			this.fadeOut();
+			this.url = state;
 
 			this.popEventListnerAdded = true;
+
+			this.fadeOut();
 
 		});
 
@@ -115,4 +124,4 @@ class Navigation {
 
 }
 
-export default new Navigation();
+export default Navigation;

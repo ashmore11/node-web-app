@@ -1,6 +1,6 @@
 {
   "name": "node-web-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "async": "^1.4.2",
@@ -8,7 +8,7 @@
     "gsap": "^1.18.0",
     "happens": "^0.6.0",
     "jquery": "^2.1.4",
-    "keystone": "https://github.com/keystonejs/keystone.git#master",
+    "keystone": "git://github.com/keystonejs/keystone.git#master",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
@@ -38,9 +38,7 @@
     "rupture": "^0.6.1"
   },
   "babel": {
-    "presets": [
-      "es2015"
-    ]
+    "presets": ["es2015"]
   },
   "engines": {
     "node": ">=0.10.22",
