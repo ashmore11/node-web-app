@@ -1,18 +1,20 @@
 doctype html
 html
 
-  head
-    
-    include components/meta
-    
-    link(href="/css/app.css", rel="stylesheet")
+	head
+		
+		include components/meta
+		
+		link(href="/css/app.css", rel="stylesheet")
 
-  body
+	body
 
-    include components/header
+		include components/header
 
-    block content
+		div(id="main")
 
-    include components/footer
+			block content
 
-    script(src="js/app.js")
+		include components/footer
+
+		script(src="js/app.js")

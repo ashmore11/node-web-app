@@ -1,12 +1,36 @@
-import HomeView from 'views/home'
+import Navigation  from 'app/navigation';
+import HomeView    from 'views/home';
+import ExampleView from 'views/example';
 
 class App {
 
 	constructor() {
 
-		console.log('---[ APP ]---');
+		Navigation.on('url:changed', id => {
+			
+			this.renderView(id);
 
-		const homeView = new HomeView();
+		});
+
+	}
+
+	renderView(id) {
+
+		switch(id) {
+			
+			case 'home':
+			
+				this.view = new HomeView();
+			
+				break;
+			
+			case 'example':
+				
+				this.view = new ExampleView();
+			
+				break;
+
+		}
 
 	}
 
