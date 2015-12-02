@@ -37,4 +37,4 @@ class App {
 
 }
 
-export default new App();
+const APP = new App();
