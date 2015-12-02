@@ -88,13 +88,18 @@
 			key: 'renderView',
 			value: function renderView(id) {
 
-				if (id === 'home') {
+				var view = this.views[id];
 
-					this.view = new _home2.default();
-				} else if (id === 'example') {
+				this.view = new view();
+			}
+		}, {
+			key: 'views',
+			get: function get() {
 
-					this.view = new _example2.default();
-				}
+				return {
+					home: _home2.default,
+					example: _example2.default
+				};
 			}
 		}]);
 

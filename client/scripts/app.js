@@ -18,17 +18,20 @@ class App {
 
 	}
 
+	get views() {
+
+		return {
+			home    : HomeView,
+			example : ExampleView,
+		};
+
+	}
+
 	renderView(id) {
 
-		if(id === 'home') {
-		
-			this.view = new HomeView();
-		
-		} else if(id === 'example') {
-		
-			this.view = new ExampleView();
-		
-		}
+		const view = this.views[id];
+
+		this.view = new view();
 
 	}
 
