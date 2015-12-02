@@ -29,9 +29,7 @@ class App {
 
 	renderView(id) {
 
-		const view = this.views[id];
-
-		this.view = new view();
+		const view = new this.views[id]();
 
 	}
 

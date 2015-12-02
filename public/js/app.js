@@ -84,9 +84,7 @@
 			key: 'renderView',
 			value: function renderView(id) {
 
-				var view = this.views[id];
-
-				this.view = new view();
+				var view = new this.views[id]();
 			}
 		}, {
 			key: 'views',
